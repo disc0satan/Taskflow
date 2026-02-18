@@ -1,0 +1,109 @@
+:root {
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --primary: #6c5ce7;
+    --text-main: #2d3436;
+    --text-muted: #b2bec3;
+    --danger: #ff7675;
+    --work-color: #0984e3;
+    --personal-color: #00b894;
+    --urgent-color: #d63031;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.container {
+    width: 95%;
+    max-width: 420px;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+header h1 { font-size: 1.8rem; color: var(--text-main); }
+#date-display { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.85rem; }
+
+.input-area { display: flex; flex-direction: column; gap: 10px; margin-bottom: 2rem; }
+.input-group { display: flex; gap: 8px; }
+
+input, select {
+    padding: 10px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    outline: none;
+}
+
+input { flex: 2; }
+select { flex: 1; font-size: 0.8rem; cursor: pointer; }
+
+button#add-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Task Styling */
+ul { list-style: none; }
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f2f6;
+    transition: all 0.3s ease;
+}
+
+.task-info { display: flex; flex-direction: column; gap: 4px; flex: 1; cursor: pointer; }
+
+.category-badge {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.badge-Personal { background: #e3faf3; color: var(--personal-color); }
+.badge-Work { background: #e1f0ff; color: var(--work-color); }
+.badge-Urgent { background: #fff0f0; color: var(--urgent-color); }
+
+.completed .task-text { text-decoration: line-through; opacity: 0.5; }
+
+/* Animations */
+.slide-out {
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--danger);
+    cursor: pointer;
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+.delete-btn:hover { opacity: 1; }
