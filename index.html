@@ -3,30 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskFlow | Pro</title>
+    <title>TaskFlow Pro | Desktop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>TaskFlow</h1>
-            <p id="date-display"></p>
-        </header>
-
-        <section class="input-area">
-            <div class="input-group">
-                <input type="text" id="task-input" placeholder="New task..." maxlength="40">
-                <select id="category-select">
-                    <option value="Personal">Personal</option>
-                    <option value="Work">Work</option>
-                    <option value="Urgent">Urgent</option>
-                </select>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="date-section">
+                <h2 id="day-name">Monday</h2>
+                <p id="full-date">Oct 24, 2023</p>
             </div>
-            <button id="add-btn">Add</button>
-        </section>
 
-        <ul id="task-list"></ul>
+            <div class="filter-section">
+                <h3>Filters</h3>
+                <ul id="category-filters">
+                    <li class="filter-item active" data-filter="all">All Tasks</li>
+                    </ul>
+            </div>
+
+            <button id="clear-all-btn" class="secondary-btn">Clear All Tasks</button>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>My Tasks</h1>
+            </header>
+
+            <section class="input-card">
+                <div class="input-row">
+                    <input type="text" id="task-input" placeholder="What's the plan?" maxlength="50">
+                    <input type="date" id="date-input">
+                </div>
+                
+                <div class="input-row">
+                    <select id="category-select">
+                        <option value="General">General</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                    </select>
+                    <input type="text" id="new-category-input" placeholder="New Category..." maxlength="12">
+                    <button id="add-btn">Add Task</button>
+                </div>
+            </section>
+
+            <ul id="task-list">
+                </ul>
+        </main>
     </div>
 
     <script src="script.js"></script>
