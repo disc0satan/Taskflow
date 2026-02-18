@@ -26,4 +26,4 @@ TaskFlo is a lightweighttask manager inspired by Synthwave and Monokai themes. I
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/neon-task-flo.git](https://github.com/disc0satan/Taskflow.git)
+   git clone [https://github.com/disc0satan/Taskflow.git]
