@@ -3,55 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskFlow Pro | Desktop</title>
+    <title>TaskFlo // Terminal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="app-container">
-        <aside class="sidebar">
-            <div class="date-section">
-                <h2 id="day-name">Monday</h2>
-                <p id="full-date">Oct 24, 2023</p>
-            </div>
-
-            <div class="filter-section">
-                <h3>Filters</h3>
-                <ul id="category-filters">
-                    <li class="filter-item active" data-filter="all">All Tasks</li>
-                    </ul>
-            </div>
-
-            <button id="clear-all-btn" class="secondary-btn">Clear All Tasks</button>
-        </aside>
-
-        <main class="main-content">
-            <header>
-                <h1>My Tasks</h1>
-            </header>
-
-            <section class="input-card">
-                <div class="input-row">
-                    <input type="text" id="task-input" placeholder="What's the plan?" maxlength="50">
-                    <input type="date" id="date-input">
-                </div>
-                
-                <div class="input-row">
-                    <select id="category-select">
-                        <option value="General">General</option>
-                        <option value="Work">Work</option>
-                        <option value="Personal">Personal</option>
+    <div class="container">
+        <header>
+            <h1 class="logo">TaskFlo</h1>
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Enter task name...">
+                <select id="categoryInput">
                     </select>
-                    <input type="text" id="new-category-input" placeholder="New Category..." maxlength="12">
-                    <button id="add-btn">Add Task</button>
-                </div>
-            </section>
+                <input type="date" id="dateInput">
+                <button id="addBtn">EXECUTE</button>
+            </div>
+        </header>
 
-            <ul id="task-list">
-                </ul>
-        </main>
+        <div class="action-row">
+            <div class="filter-section">
+                <span>FILTER:</span>
+                <select id="filterSelect" onchange="renderTasks()">
+                    <option value="all">ALL_SYSTEMS</option>
+                </select>
+            </div>
+
+            <div class="mini-cat-manager">
+                <input type="text" id="newCatName" placeholder="Custom Tag">
+                <input type="color" id="newCatColor" value="#00E5FF">
+                <button onclick="addCustomCategory()" class="mini-btn" title="Add Category">Add</button>
+                <button onclick="removeCategory()" class="mini-btn-del" title="Remove Selected Category">Remove</button>
+            </div>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <div id="allDoneMsg" class="hidden">
+            <h2 class="chill-text">you are done. go chill</h2>
+        </div>
+
+        <div class="footer-controls">
+            <button onclick="clearAll()" class="clear-btn">CLEAR_ALL_DATA</button>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
