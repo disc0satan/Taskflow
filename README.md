@@ -3,7 +3,6 @@
 TaskFlo is a lightweighttask manager inspired by Synthwave and Monokai themes. It combines simple logic with a glowing neon interface to make productivity feel like a terminal override.
 <img width="711" height="536" alt="Screenshot 2026-02-19 at 2 28 20 AM" src="https://github.com/user-attachments/assets/3e08ccad-2535-469d-97b0-e2a18715bd38" />
 
-![TaskFlo Screenshot](https://disc0satan.github.io/Taskflow/) 
 
 
 ## 🚀 Features
