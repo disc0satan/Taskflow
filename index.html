@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>TaskFlow</h1>
+            <p id="date-display"></p>
+        </header>
+
+        <section class="input-area">
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="New task..." maxlength="40">
+                <select id="category-select">
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Urgent">Urgent</option>
+                </select>
+            </div>
+            <button id="add-btn">Add</button>
+        </section>
+
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
